@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Side Hustle Wages Calculator</title>
+	<link href="index.css" type="text/css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<script type="text/javascript" src="script.js"></script>
+	<img src = "images/sidehustlelogo.png" alt="Side Hustle Logo">
+	<div class = "container">
+		<h1>Daily Wage Calculator</h1>
+		<hr>
+		<div class = "text">
+			<h3>We appreciate our exceptional employees and promote absolute transparency with their hard-earned money</h3>
+			<p>To calculate your daily wage, simply input the number of hours you worked that day (maximum is 4). Any extra hours worked should be put in the extra hours field.</p><br>
+		</div>
+		<form id = "form1">
+			<input type = "number" name="hoursworked" min="0" max="4" id="hoursworked" placeholder="Hours Worked"><br><br>
+			<input type="number" name="extrahours" min="0" id="extrahours" placeholder="Extra Hours Worked"><br><br>
+			<input type="button" id= "submit" name="submit" value="Calculate My Wage"onClick = "employeeWage(this.form)"><br>
+		</form>
+		<h3 id=print></h3>
+	</div>
+</body>
+</html>
