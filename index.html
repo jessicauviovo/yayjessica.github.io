@@ -15,11 +15,9 @@
 		<hr>
 		<div class = "text">
 			<h3>We appreciate our exceptional employees and promote absolute transparency with their hard-earned money</h3>
-			<p>To calculate your daily wage, simply input the number of hours you worked that day (maximum is 4). Any extra hours worked should be put in the extra hours field.</p><br>
 		</div>
 		<form id = "form1">
-			<input type = "number" name="hoursworked" min="0" max="4" id="hoursworked" placeholder="Hours Worked"><br><br>
-			<input type="number" name="extrahours" min="0" id="extrahours" placeholder="Extra Hours Worked"><br><br>
+			<input type = "number" name="hoursworked" min="0" max="24" id="hoursworked" placeholder="Hours Worked"><br><br>
 			<input type="button" id= "submit" name="submit" value="Calculate My Wage"onClick = "employeeWage(this.form)"><br>
 		</form>
 		<h3 id=print></h3>
