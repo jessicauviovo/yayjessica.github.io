@@ -11,9 +11,21 @@ var payPerExtraHour = 200; //amount employess are payed for each extra hours is 
 function employeeWage(form)
 {
 	let hoursWorked = form.hoursworked.value; //gets value from form in html and stores in variable
-	let extraHours = form.extrahours.value; //gets value from form in html and stores in variable
-	let idealWage = hoursWorked * payPerHour ; //calculates overtime earnings 
-	let overtimeEarnings = extraHours * payPerExtraHour; //calculates extra earnings
+	let extraHours = hoursWorked - 4; 
+	let idealWage = 0;
+	let overtimeEarnings = 0;
+
+	if(hoursWorked > 4)
+	{
+		idealWage = hoursWorked * payPerHour;
+		overtimeEarnings = extraHours * payPerExtraHour;
+	}
+
+	else 
+	{
+		idealWage = hoursWorked * payPerHour;
+	}
+	
 	var dailyWage = idealWage + overtimeEarnings; //calulates total wage
-	document.getElementById("print").innerHTML = "Congrats you've earned " + dailyWage;
+	document.getElementById("print").innerHTML = "Congrats you've earned N" + dailyWage;
 }
